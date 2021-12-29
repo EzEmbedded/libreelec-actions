@@ -1,0 +1,47 @@
+name: fetch kodi
+on:
+  workflow_dispatch:
+env:
+  TZ: Asia/Shanghai
+
+jobs:
+  fetch-src:
+    runs-on: ubuntu-18.04
+    # if: github.event.repository.owner.id == github.event.sender.id
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Initialization running environment
+        run: |
+          sudo ln -sf /bin/bash /bin/sh 
+          sudo mkdir -p /Poky && sudo -E chmod 777 /Poky
+          sudo mkdir -p /UpReleaseArtifact && sudo -E chmod 777 /UpReleaseArtifact
+          sudo mkdir -p /Poky/myscripts && sudo -E chmod 777 /Poky/myscripts
+          cp scripts/*.sh /Poky/myscripts
+          chmod +x /Poky/myscripts/*.sh
+          /Poky/myscripts/extern-disk-space.sh
+          /Poky/myscripts/install-yocto-need-pakages.sh
+      - name: fetch pack pakage src 
+        run: |
+          cd /Poky
+          /Poky/myscripts/kodi.sh
+          cd build       
+          sudo rm -rf downloads/git2/ >/dev/null 2>&1 
+          tar  cvzf - downloads/ | split -b 2040m - poky-src.tar.gz.
+          mv poky-src.tar.gz.* /UpReleaseArtifact
+          mv collect-srcrevs.txt /UpReleaseArtifact
+      - name: clear src release    #v1.0.0 is src
+        uses: dev-drprasad/delete-tag-and-release@v0.2.0
+        with:
+          delete_release: true
+          tag_name: v1.0.0   #v1.0.0 is src
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: release src    #v1.0.0 is src
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "/UpReleaseArtifact/*"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag:  "v1.0.0"    #v1.0.0 is src
+
+ 
