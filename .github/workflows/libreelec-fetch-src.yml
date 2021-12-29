@@ -19,7 +19,7 @@ jobs:
           sudo mkdir -p /libreelec/myscripts && sudo -E chmod 777 /libreelec/myscripts
           cp scripts/*.sh /libreelec/myscripts
           chmod +x /libreelec/myscripts/*.sh
-          /libreelec/myscripts/extern-disk-space.sh
+   #       /libreelec/myscripts/extern-disk-space.sh
           /libreelec/myscripts/install-libreelec-need-pakages.sh
       - name: fetch pack pakage src 
         run: |
