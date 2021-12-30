@@ -9,4 +9,6 @@
 sudo timedatectl set-timezone "$TZ"
 sudo apt-get update
 sudo apt-get upgrade
+sudo apt-get install texinfo
+sudo apt-get install xfonts-utils
 sudo apt-get install gcc make git unzip wget xz-utils bc gperf zip unzip makeinfo g++ mkfontscale mkfontdir bdftopcf xsltproc java
