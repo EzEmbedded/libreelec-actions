@@ -12,5 +12,5 @@ sudo apt-get update
 # sudo add-apt-repository ppa:team-xbmc/ppa
 # sudo apt-get update
 # sudo apt-get install libshairplay-dev
-sudo apt-get install gcc make git unzip wget xz-utils bc gperf zip unzip  g++ mkfontscale \
-xsltproc  default-jdk xfonts-utils ttf-mscorefonts-installer fontconfig
+sudo apt-get install gcc make git unzip wget xz-utils bc gperf zip unzip  g++ \
+xsltproc  default-jdk xfonts-utils
