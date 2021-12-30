@@ -14,6 +14,5 @@ sudo apt-get update
 sudo apt-get install libshairplay-dev
 sudo apt-get update
 sudo apt install -y xfonts-utils
-sudo apt-get update
 sudo apt-get install gcc make git unzip wget xz-utils bc gperf zip unzip makeinfo g++ mkfontscale \
-mkfontdir bdftopcf xsltproc  default-jdk xfonts-utils
+mkfontdir bdftopcf xsltproc  default-jdk 
