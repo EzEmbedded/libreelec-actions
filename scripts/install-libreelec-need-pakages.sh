@@ -7,6 +7,6 @@
 # sudo -E apt-get -qq autoremove --purge
 # sudo -E apt-get -qq clean
 sudo timedatectl set-timezone "$TZ"
-sudo apt update
-sudo apt upgrade
-sudo apt install gcc make git unzip wget xz-utils bc gperf zip unzip makeinfo g++ mkfontscale mkfontdir bdftopcf xsltproc java
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install gcc make git unzip wget xz-utils bc gperf zip unzip makeinfo g++ mkfontscale mkfontdir bdftopcf xsltproc java
