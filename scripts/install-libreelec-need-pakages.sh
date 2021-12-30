@@ -16,4 +16,5 @@ sudo apt remove flatbuffers-compiler
 sudo apt-get update
 sudo apt install -y flatbuffers-compiler
 sudo apt-get update
-sudo apt-get install gcc make git unzip wget xz-utils bc gperf zip unzip makeinfo g++ mkfontscale mkfontdir bdftopcf xsltproc  default-jdk
+sudo apt-get install gcc make git unzip wget xz-utils bc gperf zip unzip makeinfo g++ mkfontscale \
+mkfontdir bdftopcf xsltproc  default-jdk xfonts-utils
