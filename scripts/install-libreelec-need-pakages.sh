@@ -12,9 +12,8 @@ sudo apt-get upgrade
 sudo add-apt-repository ppa:team-xbmc/ppa
 sudo apt-get update
 sudo apt-get install libshairplay-dev
-sudo apt remove flatbuffers-compiler
 sudo apt-get update
-sudo apt install -y flatbuffers-compiler
+sudo apt install -y xfonts-utils
 sudo apt-get update
 sudo apt-get install gcc make git unzip wget xz-utils bc gperf zip unzip makeinfo g++ mkfontscale \
 mkfontdir bdftopcf xsltproc  default-jdk xfonts-utils
