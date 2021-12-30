@@ -13,4 +13,4 @@ sudo apt-get update
 # sudo apt-get update
 # sudo apt-get install libshairplay-dev
 sudo apt-get install gcc make git unzip wget xz-utils bc gperf zip unzip  g++ \
-xsltproc  default-jdk xfonts-utils
+xsltproc  default-jdk xfonts-utils lzop patchutils libparse-yapp-perl python3-dev python3-pil python3-pip
