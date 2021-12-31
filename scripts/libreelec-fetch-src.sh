@@ -5,4 +5,4 @@ pwd
 ls -al
 PROJECT=Amlogic ARCH=arm DEVICE=AMLGX  tools/download-tool
 
-PROJECT=Amlogic ARCH=arm DEVICE=AMLGX  make image
+PROJECT=Amlogic ARCH=arm DEVICE=AMLGX LOGCOMBINE=fail make image
