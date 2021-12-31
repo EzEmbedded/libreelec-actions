@@ -7,13 +7,14 @@
 # sudo -E apt-get -qq autoremove --purge
 # sudo -E apt-get -qq clean
 sudo timedatectl set-timezone "$TZ"
-sudo apt-get update
+# sudo apt-get update
 # sudo apt-get upgrade
 # sudo add-apt-repository ppa:team-xbmc/ppa
 # sudo apt-get update
 # sudo apt-get install libshairplay-dev
-sudo apt-get install gcc make git unzip wget xz-utils bc gperf zip unzip  g++ \
-xsltproc  default-jdk xfonts-utils lzop patchutils libparse-yapp-perl python3-dev \
-python3-pil python3-pip libglew-dev libwayland-dev libxkbcommon-dev waylandpp-dev \
-wayland-protocols libgbm-dev libinput-dev libxkbcommon-dev doxygen libcap-dev \
-libsndio-dev libmariadbd-dev
+apt-get update && apt-get install -y \
+    wget bash bc gcc-10 sed patch patchutils tar bzip2 gzip xz-utils zstd perl gawk gperf zip \
+      unzip diffutils lzop make file g++-10 xfonts-utils xsltproc default-jre-headless python3 \
+      libc6-dev libncurses5-dev libjson-perl libxml-parser-perl libparse-yapp-perl \
+      golang-go git openssh-client \
+    --no-install-recommends \
