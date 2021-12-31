@@ -18,4 +18,4 @@ sodu apt-get install -y \
       unzip diffutils lzop make file g++-10 xfonts-utils xsltproc default-jre-headless python3 \
       libc6-dev libncurses5-dev libjson-perl libxml-parser-perl libparse-yapp-perl \
       golang-go git openssh-client \
-    --no-install-recommends \
+
