@@ -13,7 +13,7 @@ sudo timedatectl set-timezone "$TZ"
 # sudo apt-get update
 # sudo apt-get install libshairplay-dev
 sudo apt-get update
-sodu apt-get install -y \
+sudo apt-get install -y \
     wget bash bc gcc-10 sed patch patchutils tar bzip2 gzip xz-utils zstd perl gawk gperf zip \
       unzip diffutils lzop make file g++-10 xfonts-utils xsltproc default-jre-headless python3 \
       libc6-dev libncurses5-dev libjson-perl libxml-parser-perl libparse-yapp-perl \
