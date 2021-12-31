@@ -1,5 +1,6 @@
 #!/bin/bash
 git clone https://github.com/LibreELEC/LibreELEC.tv.git
+git checkout 10.0.1
 cd LibreELEC.tv
 pwd 
 ls -al
