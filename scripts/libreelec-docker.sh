@@ -8,3 +8,4 @@ sudo chmod -R  777 ./
 # sudo mkdir -p /build/build.LibreELEC-AMLGX.arm-10.0-devel  && sudo -E chmod 777 /build/build.LibreELEC-AMLGX.arm-10.0-devel
 
 docker run --rm -v `pwd`:/build -w /build -i -e PROJECT=Amlogic -e DEVICE=AMLGX -e ARCH=arm -e ONELOG=no -e LOGCOMBINE=never libreelec make image
+df -h
