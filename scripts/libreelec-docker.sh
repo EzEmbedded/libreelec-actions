@@ -1,7 +1,7 @@
 #!/bin/bash
 git clone https://github.com/LibreELEC/LibreELEC.tv.git  -b libreelec-9.2
 cd LibreELEC.tv
-docker build --pull -t libreelec tools/docker/focal
+docker build --pull -t libreelec tools/docker/bionic
 
 docker images
 pwd
