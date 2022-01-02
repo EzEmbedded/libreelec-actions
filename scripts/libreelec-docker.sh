@@ -1,5 +1,5 @@
 #!/bin/bash
-git clone https://github.com/LibreELEC/LibreELEC.tv.git  -b libreelec-10.0
+git clone https://github.com/LibreELEC/LibreELEC.tv.git  -b libreelec-9.2
 cd LibreELEC.tv
 docker build --pull -t libreelec tools/docker/focal
 
