@@ -5,4 +5,4 @@ pwd
 ls -al
 PROJECT=Amlogic ARCH=arm DEVICE=AMLGX ONELOG=no LOGCOMBINE=fail tools/download-tool
 
-PROJECT=Amlogic ARCH=arm DEVICE=AMLGX ONELOG=no LOGCOMBINE=fail make image
+PROJECT=Amlogic ARCH=arm DEVICE=AMLGX ONELOG=no LOGCOMBINE=fail make image > /dev/null 2>&1
