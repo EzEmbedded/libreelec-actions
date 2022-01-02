@@ -1,4 +1,4 @@
-name: Fetch-libreelec-src
+name: libreelec-docker
 on:
   workflow_dispatch:
 env:
