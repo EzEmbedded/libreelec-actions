@@ -10,4 +10,6 @@ sudo chmod -R  777 ./
 docker run --rm -v `pwd`:/build -w /build -i -e PROJECT=Amlogic -e DEVICE=AMLGX -e ARCH=arm -e ONELOG=no -e LOGCOMBINE=never libreelec tools/download-tool
 docker run --rm -v `pwd`:/build -w /build -i -e PROJECT=Amlogic -e DEVICE=AMLGX -e ARCH=arm -e ONELOG=no -e LOGCOMBINE=never libreelec make image
 df -h
+echo "display build pwd"
+pwd
 
