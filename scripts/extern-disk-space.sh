@@ -34,5 +34,6 @@ sudo rm -rf /usr/local/lib/android >/dev/null 2>&1
 sudo rm -rf /usr/share/dotnet/sdk > /dev/null 2>&1
 sudo rm -rf /usr/share/dotnet/shared > /dev/null 2>&1
 sudo rm -rf /usr/share/swift > /dev/null 2>&1
+docker rmi -f $(docker images -qa)
 echo "after extern disk space:"
 df -h
