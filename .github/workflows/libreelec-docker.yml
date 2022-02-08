@@ -1,4 +1,4 @@
-name: libreelec-docker
+name: libreelec-build-on-docker
 on:
   workflow_dispatch:
 env:
@@ -20,17 +20,14 @@ jobs:
           cp scripts/*.sh /libreelec/myscripts
           chmod +x /libreelec/myscripts/*.sh
           /libreelec/myscripts/extern-disk-space.sh
-          # /libreelec/myscripts/install-libreelec-need-pakages.sh
       - name: fetch pack pakage src 
         run: |
           cd /libreelec
-          /libreelec/myscripts/libreelec-docker.sh
-          # cp /libreelec/LibreELEC.tv/LibreELEC.tv/target /UpReleaseArtifact      
+          /libreelec/myscripts/libreelec-docker.sh    
           tar  cvzf - ./target/ | split -b 2040m - LibreELEC.tv-target.tar.gz.
           mv LibreELEC.tv-target.tar.gz.* /UpReleaseArtifact
           tar  cvzf - ./sources/ | split -b 2040m - LibreELEC.tv-sources.tar.gz.
           mv LibreELEC.tv-sources.tar.gz.* /UpReleaseArtifact          
-          # mv collect-srcrevs.txt /UpReleaseArtifact
       - name: clear src release    #v1.0.0 is src
         uses: dev-drprasad/delete-tag-and-release@v0.2.0
         with:
