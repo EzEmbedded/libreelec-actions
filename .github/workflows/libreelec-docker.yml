@@ -5,8 +5,8 @@ env:
   TZ: Asia/Shanghai
 
 jobs:
-  fetch-src:
-    runs-on: ubuntu-20.04
+  fetch build and release libreelec:
+    runs-on: ubuntu-latest
     # if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
