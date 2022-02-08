@@ -24,9 +24,9 @@ jobs:
         run: |
           cd /libreelec
           /libreelec/myscripts/libreelec-docker.sh    
-          tar  cvzf - ./target/ | split -b 2040m - LibreELEC.tv-target.tar.gz.
+          tar  cvzf - /libreelec/LibreELEC.tv/target/ | split -b 2040m - LibreELEC.tv-target.tar.gz.
           mv LibreELEC.tv-target.tar.gz.* /UpReleaseArtifact
-          tar  cvzf - ./sources/ | split -b 2040m - LibreELEC.tv-sources.tar.gz.
+          tar  cvzf - /libreelec/LibreELEC.tv/sources/ | split -b 2040m - LibreELEC.tv-sources.tar.gz.
           mv LibreELEC.tv-sources.tar.gz.* /UpReleaseArtifact          
       - name: clear release    #v1.0.0 is src
         uses: dev-drprasad/delete-tag-and-release@v0.2.0
