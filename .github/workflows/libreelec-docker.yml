@@ -5,7 +5,7 @@ env:
   TZ: Asia/Shanghai
 
 jobs:
-  fetch build and release libreelec:
+  fetch_build_and_release_libreelec:
     runs-on: ubuntu-latest
     # if: github.event.repository.owner.id == github.event.sender.id
 
