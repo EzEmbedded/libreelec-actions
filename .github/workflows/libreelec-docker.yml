@@ -20,7 +20,7 @@ jobs:
           cp scripts/*.sh /libreelec/myscripts
           chmod +x /libreelec/myscripts/*.sh
           /libreelec/myscripts/extern-disk-space.sh
-      - name: fetch pack pakage src 
+      - name: fetch and build libreelec
         run: |
           cd /libreelec
           /libreelec/myscripts/libreelec-docker.sh    
@@ -28,7 +28,7 @@ jobs:
           mv LibreELEC.tv-target.tar.gz.* /UpReleaseArtifact
           tar  cvzf - ./sources/ | split -b 2040m - LibreELEC.tv-sources.tar.gz.
           mv LibreELEC.tv-sources.tar.gz.* /UpReleaseArtifact          
-      - name: clear src release    #v1.0.0 is src
+      - name: clear release    #v1.0.0 is src
         uses: dev-drprasad/delete-tag-and-release@v0.2.0
         with:
           delete_release: true
