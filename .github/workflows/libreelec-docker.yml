@@ -1,4 +1,4 @@
-name: libreelec-build-on-docker
+name: libreelec-build-with-docker
 on:
   workflow_dispatch:
 env:
