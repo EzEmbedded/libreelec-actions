@@ -28,6 +28,8 @@ jobs:
           # cp /libreelec/LibreELEC.tv/LibreELEC.tv/target /UpReleaseArtifact      
           tar  cvzf - /libreelec/LibreELEC.tv/target/ | split -b 2040m - LibreELEC.tv-target.tar.gz.
           mv LibreELEC.tv-target.tar.gz.* /UpReleaseArtifact
+          tar  cvzf - /libreelec/LibreELEC.tv/sources/ | split -b 2040m - LibreELEC.tv-sources.tar.gz.
+          mv LibreELEC.tv-sources.tar.gz.* /UpReleaseArtifact          
           # mv collect-srcrevs.txt /UpReleaseArtifact
       - name: clear src release    #v1.0.0 is src
         uses: dev-drprasad/delete-tag-and-release@v0.2.0
