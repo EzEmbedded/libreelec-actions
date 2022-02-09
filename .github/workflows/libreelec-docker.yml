@@ -24,9 +24,9 @@ jobs:
         run: |
           cd /libreelec
           /libreelec/myscripts/libreelec-docker.sh    
-          tar  cvzf - /libreelec/LibreELEC.tv/target/ | split -b 2040m - LibreELEC.tv-target.tar.gz.
+          tar  cvzfP - /libreelec/LibreELEC.tv/target/ | split -b 2040m - LibreELEC.tv-target.tar.gz.
           mv LibreELEC.tv-target.tar.gz.* /UpReleaseArtifact
-          tar  cvzf - /libreelec/LibreELEC.tv/sources/ | split -b 2040m - LibreELEC.tv-sources.tar.gz.
+          tar  cvzfP - /libreelec/LibreELEC.tv/sources/ | split -b 2040m - LibreELEC.tv-sources.tar.gz.
           mv LibreELEC.tv-sources.tar.gz.* /UpReleaseArtifact          
       - name: clear release    #v1.0.0 is src
         uses: dev-drprasad/delete-tag-and-release@v0.2.0
@@ -35,7 +35,7 @@ jobs:
           tag_name: v1.0.0   #v1.0.0 is src
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - name: release src    #v1.0.0 is src
+      - name: release target&&src    #v1.0.0 is src
         uses: ncipollo/release-action@v1
         with:
           artifacts: "/UpReleaseArtifact/*"
